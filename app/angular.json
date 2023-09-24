@@ -103,6 +103,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/app",
+            "netlifyToken": "O4MM5kiFGGadvqv6Bv362DOLgeXwGQWT7Euw86obxiM",
+            "siteId": "angular-dapp"
+          }
         }
       }
     }

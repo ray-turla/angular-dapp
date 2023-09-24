@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment';
 export class Web3ProviderService {
   private _provider = new BehaviorSubject<PhantomProvider | null>(null);
   readonly provider: Observable<PhantomProvider | null> = this._provider.asObservable()
-  readonly connection: Connection = new Connection(clusterApiUrl(environment.production ? "mainnet-beta" : "devnet"), "confirmed");
+  readonly connection: Connection = new Connection(clusterApiUrl(environment.production ? "devnet" : "devnet"), "confirmed");
   constructor() {}
 
   detectProvider = (): void => { 

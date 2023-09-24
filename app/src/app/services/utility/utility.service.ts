@@ -8,7 +8,7 @@ export class UtilityService {
   constructor() { }
 
   getExplorer = (address: string) => {
-    const cluster = environment.production ? "?cluster=mainnet" : "?cluster=devnet"
+    const cluster = environment.production ? "?cluster=devnet" : "?cluster=devnet"
     return environment.explorer_url + `/${address}` + cluster
   }
 

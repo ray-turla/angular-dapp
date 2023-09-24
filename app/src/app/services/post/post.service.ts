@@ -3,9 +3,9 @@ import { AnchorProvider, Program, ProgramAccount, Wallet, web3 } from '@coral-xy
 import { Posts } from '@target/types/posts';
 import { PhantomProvider, PostsProgram, ProgramResponse } from 'src/app/interfaces';
 import { Web3ProviderService } from '../web3provider/web3provider.service';
-import posts from '@target/idl/posts.json';
 import { BehaviorSubject } from 'rxjs';
 import { Post } from '../../interfaces';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
@@ -26,8 +26,8 @@ export class PostService {
     let connection = this.web3Provider.connection;
     const anchorProvider = new AnchorProvider(connection, provider as Wallet, AnchorProvider.defaultOptions())
     return new Program<Posts>(
-      await Program.fetchIdl(posts.metadata.address || "", anchorProvider) as Posts,
-      new web3.PublicKey(posts.metadata.address || ""),
+      await Program.fetchIdl(environment.postIDL || "", anchorProvider) as Posts,
+      new web3.PublicKey(environment.postIDL || ""),
       anchorProvider
     )
   }
