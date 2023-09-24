@@ -10,7 +10,8 @@ const routes: Routes = [
       loadChildren: () => import ('./modules/home/home.module').then(m => m.HomeModule),
       canActivate: [authGuard],
   }, 
-  { path: 'connect', component: LandingComponent, outlet: 'primary' }
+  { path: 'connect', component: LandingComponent, outlet: 'primary' },
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({
