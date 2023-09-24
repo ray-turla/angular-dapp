@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { AnchorProvider, Wallet, Provider } from '@coral-xyz/anchor';
 import { PublicKey, clusterApiUrl, Connection, LAMPORTS_PER_SOL } from '@solana/web3.js';
-import * as anchor from '@coral-xyz/anchor'
-import { Posts } from "@target/types/posts";
-import { PhantomProvider, PostsProgram } from 'src/app/interfaces';
+import { PhantomProvider } from 'src/app/interfaces';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

@@ -5,7 +5,8 @@
     "paths": {
       "@target/*": ["../target/*"],
       "@assets/*": ["./assets/*"],
-      "@scss/*": ["./scss/*"]
+      "@scss/*": ["./scss/*"],
+      "@artifact/*": ["./artifact/*"] 
     },
     "resolveJsonModule": true,
     "baseUrl": "./",

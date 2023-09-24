@@ -1,6 +1,6 @@
 import { Program } from '@coral-xyz/anchor'
 import { PublicKey } from '@solana/web3.js';
-import { Posts } from '@target/types/posts';
+import { Posts } from '@artifact/types/posts';
 
 type PostsProgram = Program<Posts> | null;
 
