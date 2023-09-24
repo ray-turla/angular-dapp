@@ -5,7 +5,7 @@
   </div>
   <div class="body">
     <nav class="font-weight-600 text-4">
-      <a><fa-icon [icon]="icon.faHome"></fa-icon> Home</a>
+      <a [routerLink]="['']"><fa-icon [icon]="icon.faHome"></fa-icon> Home</a>
       <a (click)="disconnect()"><fa-icon [icon]="icon.faLinkSlash"></fa-icon> Disconnect</a>
     </nav>
   </div>
