@@ -29,7 +29,7 @@ export class LandingComponent implements OnInit, OnDestroy {
 
   connectWallet() {
     console.log("CONNECT WALLET CLICKED")
-    this.provider?.connect({onlyIfTrusted: true})
+    this.provider?.connect()
       .then(provider => {
         console.log("isConnected: ", this.provider?.isConnected)
         this.router.navigate(["/"])

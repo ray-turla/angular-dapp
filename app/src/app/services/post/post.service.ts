@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AnchorProvider, Program, ProgramAccount, Wallet, web3 } from '@coral-xyz/anchor';
-import { Posts } from '@target/types/posts';
+import { Posts } from '@artifact/types/posts';
 import { PhantomProvider, PostsProgram, ProgramResponse } from 'src/app/interfaces';
 import { Web3ProviderService } from '../web3provider/web3provider.service';
 import { BehaviorSubject } from 'rxjs';
