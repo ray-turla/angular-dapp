@@ -18,7 +18,7 @@ export const authGuard: CanActivateFn = (route, state): Observable<boolean> | Pr
         return true;
       } else {
         // User is not authenticated, deny navigation
-        router.navigate(['/connect']); // Redirect to the login page or another appropriate route
+        router.navigate(['connect']); // Redirect to the login page or another appropriate route
         return false;
       }
     })
