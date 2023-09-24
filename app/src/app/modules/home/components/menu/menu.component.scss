@@ -1,0 +1,33 @@
+div.card {
+  border-radius: 10px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: max-content;
+  background-color: #3b3b3b;
+  color: white;
+  align-items: start;
+  height: 100%;
+  div {
+    padding: 1rem 1.5rem;
+  }
+  .header {
+    display: flex;
+    gap: 1rem;
+    justify-self: start;
+    hr {
+      border-style: solid;
+      // border-width: 1.25px;
+      transform-origin: left;
+      transform: scaleX(35);
+    }
+  }
+  .body {
+    display: grid;
+    gap: 1rem;
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+}

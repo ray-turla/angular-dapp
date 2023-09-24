@@ -1,0 +1,9 @@
+<section class="dashboard">
+  <section class="sidebar">
+    <app-user-wallet [provider]=this.provider></app-user-wallet>
+    <app-menu [provider]=this.provider></app-menu>
+  </section>
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</section>

@@ -1,0 +1,54 @@
+$danger: #DC143C;
+$warning: #FFA500;
+$info: #0074D9;
+
+.btn {
+  transition: all .5s ease;
+  &-danger {
+    background-color: #DC143C;
+    color:#FFFFFF;
+    &:hover {
+      background-color: #FF4B39;
+    }
+  }
+  &-warning {
+    background-color: #FFA500;
+    color: #333333;
+    &:hover {
+      background-color: #FFC000;
+    }
+  }
+  &-submit {
+    background-color: #28A745;
+    color: #fff;
+    &:hover {
+      background-color: #218838;
+    }
+  }
+  &-clear {
+    background-color: #545454;
+    color: #fff;
+    &:hover {
+      background-color: #444444;
+    }
+  }
+  &-info {
+    background-color: #0074D9;
+    color: #fff;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+textarea.ng-invalid.ng-touched.ng-dirty, input.ng-invalid.ng-touched.ng-dirty {
+  border-color: #DC143C !important;
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 6px rgba(220, 20, 60, 0.5) !important;
+  }
+}
+
+span.invalid {
+  color: #DC143C;
+}

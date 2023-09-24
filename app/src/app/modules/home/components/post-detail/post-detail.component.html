@@ -1,0 +1,21 @@
+<div class="card">
+  <a class="back-button" [routerLink]="['']"><fa-icon [icon]="icon.faCircleArrowLeft"></fa-icon></a>
+  <div class="header">
+    <h1 class="text-5 font-weight-700">{{post?.account?.title}}</h1>
+    <h2>By: {{post?.account?.author}}</h2>
+    <small>created: {{post?.account?.createdAt}}</small>
+    <small *ngIf="post?.account?.updatedAt">last updated: {{post?.account?.updatedAt}}</small>
+  </div>
+  <div class="body">  
+    <p>{{post?.account?.content}}</p>
+  </div>
+  <div class="footer">
+    <button class="btn btn-sm btn-danger" (click)="handleDelete(post)" *ngIf="this.provider?.publicKey?.toBase58 () === post?.account?.author?.toBase58()">
+      <fa-icon [icon]="icon.faTrashCan"></fa-icon> Delete Post
+    </button>
+    <button class="btn btn-sm btn-warning" (click)="handleUpdate(post)" *ngIf="this.provider?.publicKey?.toBase58 () === post?.account?.author?.toBase58()">
+      <fa-icon [icon]="icon.faPenToSquare"></fa-icon> Update Post
+    </button>
+    <a class="btn btn-sm btn-info" [href]="this.utils.getExplorer(post?.publicKey?.toBase58() || '')" target="_blank"><fa-icon [icon]="icon.faReceipt"></fa-icon> View Transaction</a>
+  </div>
+</div>

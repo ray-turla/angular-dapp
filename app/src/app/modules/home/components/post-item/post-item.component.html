@@ -1,0 +1,11 @@
+<div class="card" [id]="post.publicKey?.toBase58() || '' " (click)="getDetail(post)">
+  <div class="header">
+    <h2 class="text-2">Posted By: {{post.account.author.toBase58() | truncate}} at {{post.account.createdAt}}</h2>
+  </div>
+  <div class="body">
+    <h1 class="text-3 font-weight-700">{{post.account.title}}</h1>
+  </div>
+  <!-- <div class="footer">
+    
+  </div> -->
+</div>

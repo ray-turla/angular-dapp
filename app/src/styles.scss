@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import "./scss/reset.scss";
+@import "./scss/size.scss";
+@import "./scss/colors.scss";
+
+html {
+  font-family: "Quicksand", "Arial", "Helvetica";
+}
+body {
+  background: black;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  &:disabled {
+    background-color: #dcdcdc; /* Light gray background */
+    color: #777777; /* Gray text color */
+    cursor: not-allowed; /* Display a "not allowed" cursor */
+    opacity: 0.7; /* Reduced opacity for a disabled look */
+    pointer-events: none; 
+  }
+}
+button:focus {
+  border: none;
+  outline: none;
+}
+
+// textarea.custom-input {
+//   background: #1b1b1b;
+//   color: white;
+//   // width: 100%;
+//   margin: 0 auto;
+//   // height: 30px;
+//   border: 2px solid #5b5b5b;
+//   border-radius: 10px;
+//   padding: 5px 10px;
+//   transition: box-shadow 0.3s, border-color 0.3s;
+// }
+
+.custom-input {
+  background: #1b1b1b;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+  height: 2.5rem;
+  padding: 0.75rem;
+  border: 2px solid #5b5b5b;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  &-hover {
+    border-color: #999;
+    box-shadow: 0 0 7px rgba(0, 116, 217, 0.5);
+  }
+  &:focus {
+    box-shadow: 0 0 7px rgba(0, 116, 217, 0.5);
+  }
+}
+
+.custom-textarea {
+  background: #1b1b1b;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid #5b5b5b;
+  border-radius: 10px;
+  padding: 0.75rem;
+  resize: none; /* Prevent textarea resizing */
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Style the textarea when hovered */
+.custom-textarea:hover {
+  border-color: #999;
+  box-shadow: 0 0 7px rgba(0, 116, 217, 0.5);
+}
+
+/* Style the textarea when focused */
+.custom-textarea:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #0074D9; /* Change the border color when focused */
+  box-shadow: 0 0 7px rgba(0, 116, 217, 0.5); /* Add a box shadow when focused */
+}

@@ -1,0 +1,38 @@
+div.card {
+  border-radius: 10px;
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 30% 40% 30%;
+  background-color: #3b3b3b;
+  color: white;
+  align-items: center;
+  justify-items: center;
+  div {
+    padding: 0.5rem 0.5rem;
+  }
+  .body {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    .svg-wrapper {
+      background: black;
+      border-radius: 100%;
+      padding: 1rem;
+      height: 5rem;
+      width: 5rem;
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .heading-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+  }
+  .footer {
+    justify-self: center;
+  }
+}

@@ -1,0 +1,61 @@
+div.card {
+  border-radius: 10px;
+  min-height: 100%;
+  display: grid;
+  gap: .5rem;
+  grid-auto-flow: row;
+  background-color: #3b3b3b;
+  color: white;
+  margin: 0 auto;
+    /* justify-content: center; */
+  max-width: 30rem;
+
+  .header {
+    text-align: center;
+    align-self: center;
+  }
+
+  form {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    width: 85%;
+    margin: 0 auto;
+
+    .control-group {
+      display: grid;
+      gap: 0.5rem;
+      .custom-input {
+        background: #1b1b1b;
+        color: white;
+        width: 100%;
+        margin: 0 auto;
+        height: 2.75rem;
+        border: 2px solid #5b5b5b;
+        border-radius: 10px;
+        padding: 5px 10px;
+        transition: box-shadow 0.3s, border-color 0.3s;
+        &:hover {
+          border-color: #999;
+          box-shadow: 0 0 7px #99999988;
+        }
+        &:focus {
+          outline: none; /* Remove the default focus outline */
+          border-color: #0074D9; /* Change the border color when focused */
+          box-shadow: 0 0 7px rgba(0, 116, 217, 0.5);
+        }
+      }
+      .custom-textarea {
+        min-height: 20rem;
+      }
+      p {
+        justify-self: end;
+      }
+    }
+    .button-group {
+      display: flex;
+      gap: .5rem;
+      justify-content: end;
+    }
+  }
+}

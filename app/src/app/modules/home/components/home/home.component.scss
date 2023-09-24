@@ -1,0 +1,57 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  min-height: 90vh;
+  overflow: hidden;
+
+  section {
+    padding: 1rem;
+  }
+
+  .sidebar {
+    display: grid;
+    height: 90vh;
+    gap: 1rem;
+    grid-template-rows: 30% 70%;
+  }
+
+  app-posts-list {
+    .content {
+      display: grid;
+      min-height: 100vh;
+      gap: 1rem;
+      width: 100%;
+      align-items: start;
+      .input-text-wrapper {
+        display: flex;
+        padding: .75rem;
+        background: #3b3b3b;
+        border-radius: 10px;
+        .custom-input {
+          background: #1b1b1b;
+          color: white;
+          width: 100%;
+          margin: 0 auto;
+          height: 30px;
+          border: 2px solid #5b5b5b;
+          border-radius: 10px;
+          padding: 5px 10px;
+          transition: box-shadow 0.3s, border-color 0.3s;
+      }
+    
+        /* Style the input when hovered */
+        .custom-input:hover {
+            border-color: #999;
+            box-shadow: 0 0 7px #99999988;
+        }
+      }
+      
+    }
+  }
+
+  .misc {
+    display: grid;
+    gap: 1rem;
+    min-height: 50%;
+  }
+}

@@ -1,0 +1,41 @@
+div.card {
+  position: relative;
+  border-radius: 10px;
+  min-height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: .2fr 1fr .1fr;
+  background-color: #3b3b3b;
+  color: white;
+  .back-button {
+    font-size: 1.25rem;
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+  }
+  div {
+    padding: 1rem 1rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-self: center;
+  }
+  .body {
+    
+  }
+  .footer {
+    display: flex;
+    justify-self: end;
+    align-self: center;
+    gap: 1rem;
+    a.btn {
+      display: block;
+        // color: initial;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}

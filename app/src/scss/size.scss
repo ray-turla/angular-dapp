@@ -1,0 +1,75 @@
+$steps: 20;
+$base-size: 0.25rem; // Base font size in rems
+$increment: 0.25rem;
+$base-weight: 100;
+$increment-weight: 100;
+// Generate text-sizing classes in rems
+@for $i from 0 through $steps {
+  .text-#{$i} {
+    font-size: #{$base-size + $increment * $i};
+  }
+
+  .p-#{$i} {
+    padding: #{$base-size + $increment * $i};
+  }
+
+  .px-#{$i} {
+    padding-left: #{$base-size + $increment * $i};
+    padding-right: #{$base-size + $increment * $i};
+  }
+
+  .py-#{$i} {
+    padding-top: #{$base-size + $increment * $i};
+    padding-bottom: #{$base-size + $increment * $i};
+  }
+
+  .m-#{$i} {
+    margin: #{$base-size + $increment * $i};
+  }
+
+  .mb-#{$i} {
+    margin-bottom: #{$base-size + $increment * $i};
+  }
+
+  .mx-#{$i} {
+    margin-left: #{$base-size + $increment * $i};
+    margin-right: #{$base-size + $increment * $i};
+  }
+
+  .my-#{$i} {
+    margin-top: #{$base-size + $increment * $i};
+    margin-bottom: #{$base-size + $increment * $i};
+  }
+}
+
+// GENERATE FONT WEIGHTS
+@for $i from 1 through 8 {
+  $weight: $i * 100;
+  .font-weight-#{$weight} {
+    font-weight: #{$weight};
+  }
+}
+
+.btn {
+  border-radius: 7px;
+}
+
+.btn-xs {
+  padding: .25rem .5rem;
+}
+
+.btn-sm {
+  padding: .5rem .75rem;
+}
+
+.btn-md {
+  padding: .75rem 1rem;
+}
+
+.btn-lg {
+  padding: 1rem 1.25rem;
+}
+
+.btn-xl {
+  padding: 1.5rem 2rem;
+}

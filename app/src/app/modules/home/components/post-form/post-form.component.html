@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="header">
+    <h1 class="text-8 font-weight-700">{{this.post ? 'Update Post' : 'Create Post'}}</h1>
+  </div>
+  
+  <form [formGroup]="postForm">
+    <div class="control-group">
+      <label for="title">Title:</label>
+      <input class="custom-input" id="title" type="text" formControlName="title" placeholder="Enter Title">
+      <span class="invalid"  *ngIf="controlInvalid('title', 'required')">* This field is required</span>
+      <span class="invalid"  *ngIf="controlInvalid('title', 'sameUpdateFieldValue')">* This field cannot be the same as the previous value.</span>
+    </div>
+    <div class="control-group">
+      <label for="content">Content:</label>
+      <textarea class="custom-textarea" id="content" formControlName="content" placeholder="Enter Title"></textarea>
+      <span class="invalid"  *ngIf="controlInvalid('content', 'required')">*This field is required</span>
+      <span class="invalid"  *ngIf="controlInvalid('content', 'sameUpdateFieldValue')">* This field cannot be the same as the previous value.</span>
+      <p class="textarea-length">{{postForm.controls['content'].value.length}} / {{POST_CONTENT_LENGTH}}</p>
+    </div>
+    <div class="button-group">
+      <button type="button" class="btn btn-sm btn-danger" (click)="handleCancel()">
+        Cancel
+      </button>
+      <button type="button" class="btn btn-sm btn-clear" (click)="handleClear()">
+        Clear
+      </button>
+      <button type="submit" class="btn btn-sm btn-submit" [disabled]="!postForm.valid" (click)="handleSubmit()">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
