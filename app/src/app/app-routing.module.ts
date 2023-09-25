@@ -11,7 +11,7 @@ const routes: Routes = [
       canActivate: [authGuard],
   }, 
   { path: 'connect', component: LandingComponent, outlet: 'primary' },
-  { path: '**', redirectTo: ''}
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
